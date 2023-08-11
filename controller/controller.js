@@ -1,4 +1,4 @@
-const router = require("./routes/router.js")
+const router = require("../routes/router")
 const bcrypt = require('bcryptjs');
 const express = require("express") 
 const app = express() ; 
