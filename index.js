@@ -13,10 +13,10 @@ app.use(express.urlencoded({extended : true}))
 
 app.use(router)
 
-app.use('/login' , router)
-app.use('/signup',router);
-
-
+app.get('/',(req,res) => { 
+    res.send("Welcome to authentication") ;
+    
+})
 // app.get("/",(req,res) => {
 //     res.send("Welcome to authenticaction") ;
 // })
