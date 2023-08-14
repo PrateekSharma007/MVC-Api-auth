@@ -1,7 +1,7 @@
 const mongoose = require("mongoose") ; 
 const bcrypt = require("bcrypt") ;
 
-const schema = mongoose.Schema({
+const user = mongoose.Schema({
     name : {
         type :String,
         required : true 
@@ -19,7 +19,7 @@ const schema = mongoose.Schema({
 
 
 
-schema.pre('save',async function(next){
+user.pre('save',async function(next){
     try {
        
         if (this.isNew) {
@@ -33,4 +33,4 @@ schema.pre('save',async function(next){
       }
 })
 
-module.exports = mongoose.model("details",schema)
+module.exports = mongoose.model("details",user)
